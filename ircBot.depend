@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1469484550 source:c:\selfprograms\dailyprog\c++ files\ircbot\ircbot\main.cpp
+	<iostream>
+	"IRC.h"
+
+1050164572 c:\selfprograms\dailyprog\c++ files\ircbot\ircbot\irc.h
+	<stdio.h>
+	<stdarg.h>
+
