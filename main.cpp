@@ -1,5 +1,6 @@
 #include <iostream>
 #include "IRC.h"
+#include <windows.h>
 
 
 
@@ -14,7 +15,13 @@ public:
 //void Connection::establishConnection(void){
 //}
 
+void post_entry(char* params, irc_reply_data* hostd, void* conn){
 
+    IRC* irc_conn=(IRC*)conn;
+
+    irc_conn->join("#testMalle");
+    return 0;
+}
 // ERROR: Must be fixed to return an array
 int* getData()
 {
@@ -55,6 +62,8 @@ void main()
 
     //conn.hook_irc_command("PONG", &FILLERFUNCT)
 
+    conn.hook("JOIN", post_Entry);
     conn.start();
     conn.message_loop();
+    WSACleanup();
 }
