@@ -29,6 +29,7 @@ int checkCommand(string inStr){
             string potentialCommand = n.substr(8, commandList.length());
             // Execute command if present
             if (potentialCommand == n){
+                // make an array with pointers to external functions?
                 functionPointer[i];
                 i++;
             } else {
@@ -45,6 +46,10 @@ int post_Entry(char* params, irc_reply_data* hostd, void* conn){
     return 0;
 }
 
+// Function will respond to a ping request by irc server with a pong
+void pingPong(string serverIP){
+    int IRC::privmsg(serverIP, "Pong");
+}
 // getData asks user for irc data and returns a Connection class with the data.
 Connection getData()
 {
