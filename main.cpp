@@ -111,6 +111,9 @@ int main()
     pid_t pid = fork();
     if (pid == 0){
         // Child process
+        if (VARFORMESSAGE == "PING"){
+            pingPong(requestResult.address);
+        }
     } else if (pid > 0){
         // Parent Process
     } else {
