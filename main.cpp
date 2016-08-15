@@ -18,6 +18,16 @@ public:
 //void Connection::establishConnection(void){
 //}
 
+float tempConvert(float inTemp, string convertWay) {
+    if (convertWay == "celcius") {
+        return (inTemp * 9/5) + 32;
+    } else if (convertWay == "fahreheit") {
+        return (inTemp - 32) * 5/9;
+    } else {
+        return 0
+    }
+
+}
 int checkCommand(string inStr){
     string subInStr = inStr.substr(0,8);
     std::vector<string> commandList = {"quit", "motd"};
